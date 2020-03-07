@@ -1,0 +1,52 @@
+<<<<<|||||||| COPIAR Y PEGAR EN LOS FORMULARIOS ||||||| >>>>>>>>
+
+Nombre:
+	South Park
+Ano:
+	1997
+Genero:
+	Sátira
+Creador:
+	Trey Parker y Matt Stone
+ImagenSmall Url:
+	./img/southpark.jpg
+ImagenLarge Url:
+	./img/southparkLarge.jpg
+Descripcion: 
+	Está dirigida al público adulto y se caracteriza por satirizar con humor negro la sociedad, actualidad y cultura estadounidense a través de las historias y situaciones surrealistas que les suceden a sus protagonistas, cuatro chicos (Stan, Kyle, Cartman y Kenny) residentes en un pueblo ficticio de Colorado que se llama South Park.
+
+/////////////////////AGREGAR OTRO/////////////////////////
+
+Nombre:
+	Gravity Falls
+Ano:
+	2012
+Genero:
+	Fantasía
+Creador:
+	Alex Hirsch
+ImagenSmall Url:
+	./img/gravityfalls.jpg
+ImagenLarge Url:
+	./img/h_gravityfalls.jpg
+Descripcion: 
+	Se trata de una historia de dos hermanos mellizos llamados Dipper y Mabel Pines, quienes pasan sus vacaciones de verano en la cabaña de su tío abuelo Stan ubicada en un pueblo de Oregón llamado Gravity Falls, en donde ocurren eventos paranormales y sobrenaturales. Los mellizos pasan sus días resolviendo los enigmas que envuelve un misterioso diario.
+
+/////////////////////AGREGAR OTRO/////////////////////////
+
+Nombre:
+	Steven Universe
+Ano:
+	2013
+Genero:
+	Fantasía
+Creador:
+	Rebecca Sugar
+ImagenSmall Url:
+	./img/stevenSmall.jpg
+ImagenLarge Url:
+	./img/stevenLarge.jpeg
+Descripcion: 
+	Narra la historia de un niño llamado Steven, que vive en el pueblo ficticio de Beach City junto a tres guerreras alienígenas con superpoderes: Garnet, Amatista y Perla. A lo largo de los episodios, Steven aprenderá a controlar los poderes de su gema de cuarzo heredados de su madre y ayudará al resto de gemas en las misiones para defender a la humanidad.
+
+////////////////////////////////////////////////////////////////

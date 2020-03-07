@@ -8,63 +8,64 @@
     <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/>
     <link rel="stylesheet" href="style.css" >
-    <script type="module">
-      import { menuController } from 'https://cdn.jsdelivr.net/npm/@ionic/core@next/dist/ionic/index.esm.js';
-      window.menuController = menuController;
-    </script>
 </head>
 <body>
     <ion-app>
-      <ion-menu side="start" content-id="main-content">
-        <ion-header>
-          <ion-toolbar color="danger">
-            <ion-title>Menu</ion-title>
-          </ion-toolbar>
-        </ion-header>
-        <ion-content>
-          <ion-list>
-            <ion-item>
-              <ion-icon name="mail" slot="start"></ion-icon>
-              <ion-label>Inbox</ion-label>
-            </ion-item>
-            <ion-item>
-              <ion-icon name="paper-plane" slot="start"></ion-icon>
-              <ion-label>Outbox</ion-label>
-            </ion-item>
-            <ion-item>
-              <ion-icon name="heart" slot="start"></ion-icon>
-              <ion-label>Favorites</ion-label>
-            </ion-item>
-            <ion-item>
-              <ion-icon name="archive" slot="start"></ion-icon>
-              <ion-label>Archived</ion-label>
-            </ion-item>
-            <ion-item>
-              <ion-icon name="trash" slot="start"></ion-icon>
-              <ion-label>Trash</ion-label>
-            </ion-item>
-            <ion-item>
-              <ion-icon name="warning" slot="start"></ion-icon>
-              <ion-label>Spam</ion-label>
-            </ion-item>
-          </ion-list>
-        </ion-content>
-      </ion-menu>
-      <div class="ion-page" id="main-content">
+      <div class="ion-page">
         <ion-header translucent>
           <ion-toolbar color="danger">
-            <ion-buttons slot="start">
-              <ion-menu-button auto-hide="false" onclick="openMenu()"></ion-menu-button>
-            </ion-buttons>
-            <ion-buttons slot="primary">
-              <ion-button>
-                <ion-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon>
-              </ion-button>
-            </ion-buttons>
             <ion-title>GalgoToons</ion-title>
           </ion-toolbar>
         </ion-header>
-        <ion-content [fullscreen]="true">
+        <ion-content [fullscreen]="true" id="main-content">
+              <ion-card>
+                <ion-card-header>
+                    <ion-card-title class="ion-text-center">
+                        Nueva caricatura
+                    </ion-card-title>
+                </ion-card-header>
+                <ion-card-content>
+                    <ion-item>
+                        <ion-label position="floating">Nombre</ion-label>
+                        <ion-input type="text" id="input-nombre"></ion-input>
+                    </ion-item>
+                    <ion-item>
+                        <ion-label position="floating">Año</ion-label>
+                        <ion-input type="number" id="input-ano"></ion-input>
+                    </ion-item>
+                    <ion-item>
+                      <ion-label position="floating">Género</ion-label>
+                      <ion-input type="text" id="input-genero"></ion-input>
+                    </ion-item>
+                    <ion-item>
+                      <ion-label position="floating">Creador</ion-label>
+                      <ion-input type="text" id="input-creador"></ion-input>
+                    </ion-item>
+                    <ion-item>
+                      <ion-label position="floating">ImagenSmall Url</ion-label>
+                      <ion-input type="text" id="input-imgSmallUrl"></ion-input>
+                    </ion-item>
+                    <ion-item>
+                      <ion-label position="floating">ImagenLarge Url</ion-label>
+                      <ion-input type="text" id="input-imgLargeUrl"></ion-input>
+                    </ion-item>
+                    <ion-item>
+                      <ion-label position="floating">Descripción</ion-label>
+                      <ion-textarea id="input-descripcion"></ion-textarea>
+                    </ion-item>
+                    <br>
+                    <div margin-vertical text-right>
+                        <ion-button fill='outline' id="btn-cancelar">
+                            <ion-icon slot="start" name="close"></ion-icon>
+                            Cancelar
+                        </ion-button>
+                        <ion-button class="ion-float-right" id="btn-confirm">
+                            <ion-icon slot="start" name="add"></ion-icon>
+                            Agregar
+                        </ion-button>
+                    </div>
+                </ion-card-content>
+            </ion-card>
             <ion-card>
                 <img src="./img/hazbin.png"/>
                 <ion-card-header>
@@ -74,53 +75,146 @@
             </ion-card>
             <ion-item class="ion-margin-end">
               <ion-label color="danger" class="ion-text-center">
-                <p class="middle-label">RECIENTES</p>
+                <p class="middle-label">AGREGADAS</p>
               </ion-label>
             </ion-item>
             <br>
             <ion-grid> 
-                <ion-row>
-                    <ion-col size="6">
-                      <ion-card href="toon.html">
-                        <img src="./img/gravityfalls.jpg"/>
-                        <ion-card-header>
-                         <ion-card-subtitle color="danger" class="ion-text-center">Gravity Falls</ion-card-subtitle>
-                        </ion-card-header>
-                      </ion-card>
-                    </ion-col>
-                    <ion-col size="6">
-                      <ion-card>
-                          <img src="./img/steven_universe1.jpg"/>
-                          <ion-card-header>
-                            <ion-card-subtitle color="danger" class="ion-text-center">Steven Universe</ion-card-subtitle>
-                          </ion-card-header>
-                      </ion-card>
-                    </ion-col>
-                    <ion-col size="6">
-                      <ion-card>
-                          <img src="./img/tomandjerry.jpg"/>
-                          <ion-card-header>
-                            <ion-card-subtitle color="danger" class="ion-text-center">Tom and Jerry</ion-card-subtitle>
-                          </ion-card-header>
-                      </ion-card>
-                    </ion-col>
-                    <ion-col size="6">
-                      <ion-card>
-                          <img src="./img/southpark.jpg"/>
-                          <ion-card-header>
-                            <ion-card-subtitle color="danger" class="ion-text-center">South Park</ion-card-subtitle>
-                          </ion-card-header>
-                      </ion-card>
-                    </ion-col>
+                <ion-row id='row-display'>
                 </ion-row>
             </ion-grid>
+        </ion-content>
+        <ion-content id='toon-details'> 
         </ion-content>
       </div>
     </ion-app>
     <script>
-      async function openMenu() {
-        await menuController.open();
+      const nombre = document.querySelector('#input-nombre');
+      const ano = document.querySelector('#input-ano');
+      const genero = document.querySelector('#input-genero');
+      const creador = document.querySelector('#input-creador');
+      const imgSmall = document.querySelector('#input-imgSmallUrl');
+      const imgLarge = document.querySelector('#input-imgLargeUrl');
+      const descripcion = document.querySelector('#input-descripcion');
+      const confirmar = document.querySelector('#btn-confirm');
+      const cancelar = document.querySelector('#btn-cancelar');
+      const row = document.querySelector('#row-display');
+      const details = document.querySelector('#toon-details');
+      
+      confirmar.addEventListener('click', () => {
+        
+        const nombreCaricatura = document.getElementById('input-nombre');
+        const anoCaricatura = document.getElementById('input-ano');
+        const generoCaricatura = document.getElementById('input-genero');
+        const creadorCaricatura = document.getElementById('input-creador');
+        const imgSmallCaricatura = document.getElementById('input-imgSmallUrl');
+        const imgLargeCaricatura = document.getElementById('input-imgLargeUrl');
+        const descripcionCaricatura = document.getElementById('input-descripcion');
+
+        
+        var toon = {
+          "nombre": nombreCaricatura.value,
+          "ano": anoCaricatura.value,
+          "genero": generoCaricatura.value,
+          "creador": creadorCaricatura.value,
+          "imgSmall": imgSmallCaricatura.value,
+          "imgLarge": imgLargeCaricatura.value,
+          "descripcion": descripcionCaricatura.value
+        }
+
+        var jsonToon = JSON.stringify(toon);
+        localStorage.setItem(nombreCaricatura.value, jsonToon);
+        var toonJSONFromLS = localStorage.getItem(nombreCaricatura.value);
+        var toonFromLS = JSON.parse(toonJSONFromLS);
+
+        row.innerHTML += "<ion-col size='6' size-xl='3'> "+
+                            "<ion-card onclick=\"loadToon('"+nombreCaricatura.value+"');\">"+
+                              "<img src='"+imgSmallCaricatura.value+"'/>"+
+                              "<ion-card-header>"+
+                                "<ion-card-subtitle color='danger' class='ion-text-center'>"+nombreCaricatura.value+"</ion-card-subtitle>"+
+                              "</ion-card-header>"+
+                            "</ion-card>"+
+                          "</ion-col>";
+        clearInputs();
+      });
+      cancelar.addEventListener('click', () => {
+        clearInputs();
+      });
+
+      function hideMainContent() {
+        var x = document.getElementById("main-content");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
       }
+
+      function hideDetailsContent(){
+        var x = document.getElementById("toon-details");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+      }
+
+      function returnMainContent(){
+        hideMainContent();
+        hideDetailsContent();
+      }
+      
+      function clearInputs(){
+        nombre.value = "";
+        ano.value = "";
+        genero.value = "";
+        creador.value = "";
+        imgSmall.value = "";
+        imgLarge.value = "";
+        descripcion.value = "";
+      }
+
+      function loadToon(nombre){
+            var toonJSONFromLS = localStorage.getItem(nombre);
+            var toonFromLS = JSON.parse(toonJSONFromLS);
+            hideMainContent();
+            createToon(toonFromLS.nombre, toonFromLS.ano, toonFromLS.genero, toonFromLS.creador, toonFromLS.imgSmall, toonFromLS.imgLarge, toonFromLS.descripcion);
+            hideDetailsContent();
+      }
+
+      function createToon(nombre, ano, genero, creador, imgsmall, imglarge, descripcion){
+        details.innerHTML = "<ion-card>"+
+                                "<img src='"+imglarge+"'/>"+
+                                "<ion-card-header>"+
+                                    "<ion-grid>"+
+                                        "<ion-row>"+
+                                            "<ion-col size='12'>"+
+                                                ano + " - " + genero + " - " + creador +
+                                            "</ion-col>"+
+                                        "</ion-row>"+
+                                        "<ion-row>"+
+                                            "<ion-col size='6'><h3 color='danger' class='item-title'>"+nombre+"</h3></ion-col>"+
+                                            "<ion-col size='6' class='ion-text-end'>"+
+                                                "<div class='ion-margin-top'>"+
+                                                    "<ion-icon color='danger' name='star'></ion-icon>"+
+                                                    "<ion-icon color='danger' name='star'></ion-icon>"+
+                                                    "<ion-icon color='danger' name='star'></ion-icon>"+
+                                                    "<ion-icon color='danger' name='star'></ion-icon>"+
+                                                    "<ion-icon color='danger' name='star-outline'></ion-icon>"+
+                                                "</div>"+
+                                            "</ion-col>"+
+                                        "</ion-row>"+
+                                    "</ion-grid>"+
+                                "</ion-card-header>"+
+                                "<ion-card-content class='ion-text-justify'>"+
+                                    descripcion +
+                                "</ion-card-content>"+
+                                "<ion-button onclick='returnMainContent();' class='ion-margin' color='danger'>Regresar</ion-button>"+
+                              "</ion-card>";
+      }
+
+      window.onload = hideDetailsContent;
+
     </script>
 </body>
 </html>
